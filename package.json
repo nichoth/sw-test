@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "devDependencies": {
+    "ecstatic": "^0.8.0"
+  }
+}
