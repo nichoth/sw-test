@@ -1,8 +1,13 @@
 /**
  * This event is triggered during install/registration of the ServiceWorker.
  */
-self.addEventListener('install', function(event) {
+this.addEventListener('install', function(ev) {
   console.log('Serviceworker installed!');
+  ev.waitUntil(
+    caches.open('v1').then(function(cache) {
+      console.log(cache);
+    })
+  );
 });
 
 
@@ -10,6 +15,6 @@ self.addEventListener('install', function(event) {
  * This event is triggered for all network requests made against our
  * ServiceWorker's scope.
  */
-self.addEventListener('fetch', function(event) {
+this.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
 });
