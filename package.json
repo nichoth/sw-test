@@ -1,8 +1,17 @@
 {
   "scripts": {
-    "dev": "node server.js"
+    "build-js": "browserify -d browser/sw.js > public/sw.js",
+    "watch-main": "watchify browser/main.js -o public/main.js -dv",
+    "watch-sw": "watchify browser/sw.js -o public/sw.js -dv",
+    "watch-js": "npm run watch-main & npm run watch-sw",
+    "dev": "npm run watch-js & node server.js"
   },
   "devDependencies": {
     "ecstatic": "^0.8.0"
+  },
+  "dependencies": {
+    "es6-promise": "^2.3.0",
+    "serviceworker-cache-polyfill": "^3.0.0",
+    "whatwg-fetch": "^0.9.0"
   }
 }

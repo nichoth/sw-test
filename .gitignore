@@ -79,4 +79,7 @@ node_modules
 
 *.db
 *.swp
+# bundles
 bundle.js
+public/*.js
+
