@@ -11,6 +11,10 @@ If you shift+reload a document it will always load without a controller.
 
 * Close & reopen the tab, or shift+reload then normal reload
 
+**What's the deal with `self`?**
+
+`self` is a reference to `ServiceWorkerGlobalScope`. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/self)
+
 ## Research
 
 * [slightlyoff/ServiceWorker/explainer.md](https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md)
