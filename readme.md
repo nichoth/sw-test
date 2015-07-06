@@ -50,3 +50,4 @@ Tool to make a list of requests?
 
 * [trained to thrill (demo)](https://github.com/jakearchibald/trained-to-thrill)
 
+* [registration example via google](https://github.com/googlechrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js)
