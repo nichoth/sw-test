@@ -36,6 +36,11 @@ return cache.addAll([
 
 Tool to make a list of requests?
 
+**Check out [`sw-precache`](https://github.com/GoogleChrome/sw-precache)** &mdash; a build tool that generates sw and asset list. You can use globs since it runs in gulp.
+
+* automatically versions cached assets using a hash of the content
+* knows which caches have expired
+
 ## Research
 
 * [slightlyoff/ServiceWorker/explainer.md](https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md)
@@ -51,3 +56,5 @@ Tool to make a list of requests?
 * [trained to thrill (demo)](https://github.com/jakearchibald/trained-to-thrill)
 
 * [registration example via google](https://github.com/googlechrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js)
+
+* [code examples](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker)
