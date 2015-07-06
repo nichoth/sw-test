@@ -1,3 +1,4 @@
+require('whatwg-fetch');
 require('serviceworker-cache-polyfill');
 var CACHE_V = 'v1';
 

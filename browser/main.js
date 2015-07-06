@@ -1,5 +1,4 @@
 window.Promise = window.Promise || require('es6-promise').Promise;
-require('whatwg-fetch');
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js')

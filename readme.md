@@ -7,13 +7,34 @@ Use these for debugging:
 
 If you shift+reload a document it will always load without a controller.
 
-**How do I [update the service worker](https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md#updating-a-serviceworker)**
+**How do I [update the service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Updating_your_service_worker)**
+
+Change the service worker file, and make sure to update the cache key (the cache version).
 
 * Close & reopen the tab, or shift+reload then normal reload
 
 **What's the deal with `self`?**
 
 `self` is a reference to `ServiceWorkerGlobalScope`. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/self)
+
+## things to do
+
+DRY way to keep track of static assets to pre-fetch. Our install event might fetch things like this:
+
+```js
+cache.addAll([
+  '/contact'
+]);
+return cache.addAll([
+  '/',
+  '/style.css',
+  '/assets/img/bg-bah.png',
+  '/assets/img/circle.svg',
+  '/assets/img/triangle.svg'
+]);
+```
+
+Tool to make a list of requests?
 
 ## Research
 
